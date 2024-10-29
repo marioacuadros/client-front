@@ -1,0 +1,20 @@
+<div *ngIf="clientData">
+    <div class="card text-center mx-auto" style="width: 18rem; background-color: #f8f9fa;">
+        <div class="card-body">
+            <h6>Información básica:</h6>
+            <div>
+                <label for="documentNumber">Número de documento</label>
+                <input type="text" class="form-control" formControlName="documentNumber" value="{{clientData.documentNumber}}" disabled>
+                <label for="firstName">Primer nombre</label>
+                <input type="text" class="form-control" formControlName="firstName" value="{{clientData.firstName}}" disabled>
+                <label for="secondName">Segundo nombre</label>
+                <input type="text" class="form-control" formControlName="secondName" value="{{clientData.secondName}}" disabled>
+                <label for="firstLastName">Primer apellido</label>
+                <input type="text" class="form-control" formControlLastName="firstLastName" value="{{clientData.firstLastName}}" disabled>
+                <label for="secondLastName">Segundo apellido</label>
+                <input type="text" class="form-control" formControlLastName="secondLastName" value="{{clientData.secondLastName}}" disabled>
+            </div>
+        </div>
+    </div>
+    
+</div>

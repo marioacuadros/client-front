@@ -1,0 +1,14 @@
+label {
+    color: #3498db; 
+    text-align: left; 
+    display: block; 
+    font-weight: bold; 
+}
+select {
+    text-align: left; 
+    display: block;    
+}
+
+.form-control{
+    border-radius:10px;
+}
