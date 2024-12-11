@@ -28,6 +28,8 @@ export class SearchClientComponent implements OnInit{
     });
   }
 
+  errorMessage: string | null = null;
+
   client: Client = {
     documentType: '',
     documentNumber: '',
@@ -48,9 +50,12 @@ export class SearchClientComponent implements OnInit{
       result => {
         this.clientDataService.updateClientData(result);
         this.router.navigate(['/view']);
+      },
+      (error: any) => { // Manejador de errores aquí
+        this.errorMessage = 'Error al obtener la información del cliente. Inténtelo de nuevo.';
+        console.log("Error", error);
+        console.log(this.errorMessage);
       }
-    ),(error:any)=>{
-      console.log("Error", error)
-    };
+    );
   }
 }

@@ -2,6 +2,10 @@
     <div class="card text-center mx-auto" style="width: 18rem; background-color: #f8f9fa;">
         <div class="card-body">
             <h6 class="card-subtitle mb-2 text-muted">Todos los campos obligatorios</h6>
+            <h6>Cédula válida:  23445322</h6>
+            <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+                {{ errorMessage }}
+            </div>
             <form [formGroup]="searchForm">
                 <div class="form-group">
                     <label for="documentType">Tipo de documento</label>

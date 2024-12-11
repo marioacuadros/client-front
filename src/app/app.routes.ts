@@ -4,5 +4,6 @@ import { ViewClientComponent } from './components/view-client/view-client.compon
 
 export const routes: Routes = [
     {path: '', component: SearchClientComponent},
+    {path: 'search', component: SearchClientComponent},
     {path: 'view', component: ViewClientComponent},
 ];
